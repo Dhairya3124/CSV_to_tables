@@ -11,8 +11,9 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
+app.set('views','views');
 app.set('view engine', 'ejs');
-app.use(express.static(path.resolve(__dirname,'public')));
+//app.use(express.static(path.resolve(__dirname,'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.get('/', (req, res) => {
