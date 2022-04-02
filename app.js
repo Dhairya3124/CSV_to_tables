@@ -149,6 +149,6 @@ app.post('/addmagazines', async(req, res) => {
 app.get('/formmagazines', (req, res) => {
   res.render('addmagazines');
   })
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Timezones by location application is running on port ${port}.`);
 });
