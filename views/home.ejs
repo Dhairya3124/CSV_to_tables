@@ -37,6 +37,28 @@
         <button type="button" class="btn btn-warning"><a  href = "/getmagazines" style="color: inherit;">Magazines.csv</a></button>
         <button type="button" class="btn btn-warning"><a  href = "/formbooks" style="color: inherit;">Add books</a></button>
         <button type="button" class="btn btn-warning"><a  href = "/formmagazines" style="color: inherit;">Add Magazines</a></button>
+        <button type="button" id = "booksandmagazine" class="btn btn-warning"><a  style="color: inherit;">Books and Magazines.csv</a></button>
+
      </div>
+     <script>
+        document.getElementById("booksandmagazine").onclick = function () {
+            //Create a post request to the server /booksandmagazine
+            var xhr = new XMLHttpRequest();
+            //MAKE A POST REQUEST
+            xhr.open("POST", "/booksandmagazines", true);
+            //SEND THE REQUEST
+            xhr.send();
+            //ON RESPONSE
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    //GET THE RESPONSE
+                    var response = 'The file for books and magazines has been created check csvfiles folder.';
+                    //DISPLAY THE RESPONSE
+                    alert(response);
+                }
+            }
+        };
+
+     </script>
 </body>
 </html>
