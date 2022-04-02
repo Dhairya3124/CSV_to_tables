@@ -1,9 +1,3 @@
-// import axios from 'axios';
-// import express from 'express';
-// import csvparser from 'csv-parser';
-// import * as fs from 'fs';
-// import path from 'path';
-// import bodyParser from 'body-parser';
 const axios = require('axios');
 const express = require('express');
 const fs = require('fs');
